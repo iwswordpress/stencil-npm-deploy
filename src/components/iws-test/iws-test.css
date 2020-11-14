@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+div {
+  font-size: 22px;
+  margin: 20px;
+  color: #2196f3;
+}

@@ -1,7 +1,7 @@
 {
   "name": "iwswordpress-test",
-  "version": "4.0.0",
-  "description": "Stencil two component iwswordpress-test NPM deploy",
+  "version": "5.0.2",
+  "description": "Stencil test",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

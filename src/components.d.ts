@@ -12,6 +12,12 @@ export namespace Components {
          */
         "app": string;
     }
+    interface IwsTest {
+        /**
+          * The first name
+         */
+        "app": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -26,6 +32,9 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface UcStockPrice {
+        "stockSymbol": string;
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -34,19 +43,39 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
+    interface HTMLIwsTestElement extends Components.IwsTest, HTMLStencilElement {
+    }
+    var HTMLIwsTestElement: {
+        prototype: HTMLIwsTestElement;
+        new (): HTMLIwsTestElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLUcStockPriceElement extends Components.UcStockPrice, HTMLStencilElement {
+    }
+    var HTMLUcStockPriceElement: {
+        prototype: HTMLUcStockPriceElement;
+        new (): HTMLUcStockPriceElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
+        "iws-test": HTMLIwsTestElement;
         "my-component": HTMLMyComponentElement;
+        "uc-stock-price": HTMLUcStockPriceElement;
     }
 }
 declare namespace LocalJSX {
     interface AppHome {
+        /**
+          * The first name
+         */
+        "app"?: string;
+    }
+    interface IwsTest {
         /**
           * The first name
          */
@@ -66,9 +95,14 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface UcStockPrice {
+        "stockSymbol"?: string;
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
+        "iws-test": IwsTest;
         "my-component": MyComponent;
+        "uc-stock-price": UcStockPrice;
     }
 }
 export { LocalJSX as JSX };
@@ -76,7 +110,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "iws-test": LocalJSX.IwsTest & JSXBase.HTMLAttributes<HTMLIwsTestElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "uc-stock-price": LocalJSX.UcStockPrice & JSXBase.HTMLAttributes<HTMLUcStockPriceElement>;
         }
     }
 }
