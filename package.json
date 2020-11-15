@@ -1,7 +1,7 @@
 {
   "name": "iwswordpress-test",
-  "version": "5.0.2",
-  "description": "Stencil test",
+  "version": "5.1.0",
+  "description": "IWS NPM Template",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
