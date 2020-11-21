@@ -1,6 +1,6 @@
 {
-  "name": "iwswordpress-test",
-  "version": "5.1.0",
+  "name": "iwswordpress-ionic",
+  "version": "0.0.2",
   "description": "IWS NPM Template",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",

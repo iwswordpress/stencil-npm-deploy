@@ -32,8 +32,8 @@ form button {
 
 form button:hover,
 form button:active {
-  background: var(--color-primary-highlight, black);
-  border-color: var(--color-primary-highlight, black);
+  background: var(--color-primary, black);
+  border-color: var(--color-primary, black);
 }
 
 form button:disabled {
@@ -41,4 +41,23 @@ form button:disabled {
   border-color: #ccc;
   color: white;
   cursor: not-allowed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0.25rem 0;
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+li:hover,
+li:active {
+  background: var(--color-primary, black);
+  color: white;
 }
