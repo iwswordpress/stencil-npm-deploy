@@ -1,7 +1,7 @@
 dist/
 www/
 loader/
-
+src/global/global.ts
 *~
 *.sw[mnpcod]
 *.log

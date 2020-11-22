@@ -10,23 +10,23 @@ export class MyComponent {
   /**
    * The first name
    */
-  @Prop() first: string;
+  @Prop() firstName: string;
 
   /**
    * The middle name
    */
-  @Prop() middle: string;
+  @Prop() middleName: string;
 
   /**
    * The last name
    */
-  @Prop() last: string;
+  @Prop() lastName: string;
 
   private getText(): string {
-    return format(this.first, this.middle, this.last);
+    return format(this.firstName, this.middleName, this.lastName);
   }
 
   render() {
-    return <div>NPM DEPLOY {this.getText()}</div>;
+    return <div>This is the basic stencil file: {this.getText()}</div>;
   }
 }
