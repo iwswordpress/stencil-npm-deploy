@@ -3,7 +3,7 @@ import { Component, State, Event, EventEmitter, h } from '@stencil/core';
 import { AV_API_KEY } from '../../global/global';
 
 @Component({
-  tag: 'uc-stock-finder',
+  tag: 'iws-stock-finder',
   styleUrl: './stock-finder.css',
   shadow: true,
 })

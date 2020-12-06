@@ -6,6 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface IwsSpinner {
+    }
+    interface IwsStockFinder {
+    }
+    interface IwsStockPrice {
+        "stockSymbol": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -20,47 +27,48 @@ export namespace Components {
          */
         "middleName": string;
     }
-    interface UcSpinner {
-    }
-    interface UcStockFinder {
-    }
-    interface UcStockPrice {
-        "stockSymbol": string;
-    }
 }
 declare global {
+    interface HTMLIwsSpinnerElement extends Components.IwsSpinner, HTMLStencilElement {
+    }
+    var HTMLIwsSpinnerElement: {
+        prototype: HTMLIwsSpinnerElement;
+        new (): HTMLIwsSpinnerElement;
+    };
+    interface HTMLIwsStockFinderElement extends Components.IwsStockFinder, HTMLStencilElement {
+    }
+    var HTMLIwsStockFinderElement: {
+        prototype: HTMLIwsStockFinderElement;
+        new (): HTMLIwsStockFinderElement;
+    };
+    interface HTMLIwsStockPriceElement extends Components.IwsStockPrice, HTMLStencilElement {
+    }
+    var HTMLIwsStockPriceElement: {
+        prototype: HTMLIwsStockPriceElement;
+        new (): HTMLIwsStockPriceElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLUcSpinnerElement extends Components.UcSpinner, HTMLStencilElement {
-    }
-    var HTMLUcSpinnerElement: {
-        prototype: HTMLUcSpinnerElement;
-        new (): HTMLUcSpinnerElement;
-    };
-    interface HTMLUcStockFinderElement extends Components.UcStockFinder, HTMLStencilElement {
-    }
-    var HTMLUcStockFinderElement: {
-        prototype: HTMLUcStockFinderElement;
-        new (): HTMLUcStockFinderElement;
-    };
-    interface HTMLUcStockPriceElement extends Components.UcStockPrice, HTMLStencilElement {
-    }
-    var HTMLUcStockPriceElement: {
-        prototype: HTMLUcStockPriceElement;
-        new (): HTMLUcStockPriceElement;
-    };
     interface HTMLElementTagNameMap {
+        "iws-spinner": HTMLIwsSpinnerElement;
+        "iws-stock-finder": HTMLIwsStockFinderElement;
+        "iws-stock-price": HTMLIwsStockPriceElement;
         "my-component": HTMLMyComponentElement;
-        "uc-spinner": HTMLUcSpinnerElement;
-        "uc-stock-finder": HTMLUcStockFinderElement;
-        "uc-stock-price": HTMLUcStockPriceElement;
     }
 }
 declare namespace LocalJSX {
+    interface IwsSpinner {
+    }
+    interface IwsStockFinder {
+        "onUcSymbolSelected"?: (event: CustomEvent<string>) => void;
+    }
+    interface IwsStockPrice {
+        "stockSymbol"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -75,29 +83,21 @@ declare namespace LocalJSX {
          */
         "middleName"?: string;
     }
-    interface UcSpinner {
-    }
-    interface UcStockFinder {
-        "onUcSymbolSelected"?: (event: CustomEvent<string>) => void;
-    }
-    interface UcStockPrice {
-        "stockSymbol"?: string;
-    }
     interface IntrinsicElements {
+        "iws-spinner": IwsSpinner;
+        "iws-stock-finder": IwsStockFinder;
+        "iws-stock-price": IwsStockPrice;
         "my-component": MyComponent;
-        "uc-spinner": UcSpinner;
-        "uc-stock-finder": UcStockFinder;
-        "uc-stock-price": UcStockPrice;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "iws-spinner": LocalJSX.IwsSpinner & JSXBase.HTMLAttributes<HTMLIwsSpinnerElement>;
+            "iws-stock-finder": LocalJSX.IwsStockFinder & JSXBase.HTMLAttributes<HTMLIwsStockFinderElement>;
+            "iws-stock-price": LocalJSX.IwsStockPrice & JSXBase.HTMLAttributes<HTMLIwsStockPriceElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "uc-spinner": LocalJSX.UcSpinner & JSXBase.HTMLAttributes<HTMLUcSpinnerElement>;
-            "uc-stock-finder": LocalJSX.UcStockFinder & JSXBase.HTMLAttributes<HTMLUcStockFinderElement>;
-            "uc-stock-price": LocalJSX.UcStockPrice & JSXBase.HTMLAttributes<HTMLUcStockPriceElement>;
         }
     }
 }

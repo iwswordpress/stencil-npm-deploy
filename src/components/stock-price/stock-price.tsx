@@ -3,7 +3,7 @@ import { Component, State, Element, Listen, Prop, Watch, h } from '@stencil/core
 import { AV_API_KEY } from '../../global/global';
 
 @Component({
-  tag: 'uc-stock-price',
+  tag: 'iws-stock-price',
   styleUrl: './stock-price.css',
   shadow: true,
 })
