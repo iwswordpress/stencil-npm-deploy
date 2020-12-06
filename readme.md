@@ -2,11 +2,32 @@
 
 This repo uses StencilJS to create a number of Web Components, which are then compiled for publishing on NPM.
 
-Repo is stencil-npm using npm branch - also use in main and master.
+Repo is stencil-npm using npm branch - also use in main.
 
 These are used in the stencil-npm-deploy-react, https://github.com/iwswordpress/stencil-npm-deploy-react/, repo to use NPM Web Components in a React project.
 
 current version is "iwswordpress-ionic": "^0.1.1",
+
+```
+import { Config } from '@stencil/core';
+
+export const config: Config = {
+  namespace: 'iwswordpress-ionic',
+  outputTargets: [
+    {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+    },
+  ],
+};
+
+```
+
+```
+"name": "iwswordpress-ionic",
+  "version": "0.1.1",
+  "description": "IWS NPM Template from stencil-npm folder",
+```
 
 src/index.html has custom css defined in head:
 
