@@ -52,6 +52,7 @@ export class StockFinder {
     }
     return [
       <form onSubmit={this.onFindStocks.bind(this)}>
+        <p>iwswordpress-ionic npm</p>
         <input id="stock-symbol" ref={el => (this.stockNameInput = el)} />
         <button type="submit">Find!</button>
       </form>,
