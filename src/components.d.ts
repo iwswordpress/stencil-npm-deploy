@@ -13,6 +13,8 @@ export namespace Components {
     interface IwsStockPrice {
         "stockSymbol": string;
     }
+    interface IwsWordpress {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -47,6 +49,12 @@ declare global {
         prototype: HTMLIwsStockPriceElement;
         new (): HTMLIwsStockPriceElement;
     };
+    interface HTMLIwsWordpressElement extends Components.IwsWordpress, HTMLStencilElement {
+    }
+    var HTMLIwsWordpressElement: {
+        prototype: HTMLIwsWordpressElement;
+        new (): HTMLIwsWordpressElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -57,6 +65,7 @@ declare global {
         "iws-spinner": HTMLIwsSpinnerElement;
         "iws-stock-finder": HTMLIwsStockFinderElement;
         "iws-stock-price": HTMLIwsStockPriceElement;
+        "iws-wordpress": HTMLIwsWordpressElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -68,6 +77,9 @@ declare namespace LocalJSX {
     }
     interface IwsStockPrice {
         "stockSymbol"?: string;
+    }
+    interface IwsWordpress {
+        "onIwsPostSelected"?: (event: CustomEvent<string>) => void;
     }
     interface MyComponent {
         /**
@@ -87,6 +99,7 @@ declare namespace LocalJSX {
         "iws-spinner": IwsSpinner;
         "iws-stock-finder": IwsStockFinder;
         "iws-stock-price": IwsStockPrice;
+        "iws-wordpress": IwsWordpress;
         "my-component": MyComponent;
     }
 }
@@ -97,6 +110,7 @@ declare module "@stencil/core" {
             "iws-spinner": LocalJSX.IwsSpinner & JSXBase.HTMLAttributes<HTMLIwsSpinnerElement>;
             "iws-stock-finder": LocalJSX.IwsStockFinder & JSXBase.HTMLAttributes<HTMLIwsStockFinderElement>;
             "iws-stock-price": LocalJSX.IwsStockPrice & JSXBase.HTMLAttributes<HTMLIwsStockPriceElement>;
+            "iws-wordpress": LocalJSX.IwsWordpress & JSXBase.HTMLAttributes<HTMLIwsWordpressElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

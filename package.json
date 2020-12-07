@@ -1,7 +1,7 @@
 {
   "name": "iwswordpress-ionic",
-  "version": "0.1.4",
-  "description": "IWS NPM Template from stencil-npm folder with global",
+  "version": "0.2.1",
+  "description": "IWS WP and UC",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

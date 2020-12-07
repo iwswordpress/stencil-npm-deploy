@@ -124,7 +124,8 @@ export class StockPrice {
     }
     return [
       <form onSubmit={this.onFetchStockPrice.bind(this)}>
-        <p>iwswordpress-ionic npm</p>
+        <h3>0.2.0 from vercel</h3>
+        <p>iwswordpress-ionic npm </p>
         <input id="stock-symbol" ref={el => (this.stockInput = el)} value={this.stockUserInput} onInput={this.onUserInput.bind(this)} />
         <button type="submit" disabled={!this.stockInputValid || this.loading}>
           Fetch

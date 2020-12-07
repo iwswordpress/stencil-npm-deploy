@@ -28,7 +28,19 @@ export const config: Config = {
   "version": "0.1.1",
   "description": "IWS NPM Template from stencil-npm folder",
 ```
-
+index.ts in ionic-events uses:
+```
+import {
+  applyPolyfills,
+  defineCustomElements as defineIWS
+} from 'iwswordpress-ionic/loader'; // allows use of many npm web components
+const { SplashScreen } = Plugins;
+ReactDOM.render(<App />, document.getElementById('root'));
+SplashScreen.hide();
+applyPolyfills().then(() => {
+  defineIWS();
+});
+```
 src/index.html has custom css defined in head:
 
 ```

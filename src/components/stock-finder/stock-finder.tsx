@@ -52,7 +52,8 @@ export class StockFinder {
     }
     return [
       <form onSubmit={this.onFindStocks.bind(this)}>
-        <p>iwswordpress-ionic npm</p>
+        <h3>0.2.0 from vercel</h3>
+        <p>iwswordpress-ionic npm </p>
         <input id="stock-symbol" ref={el => (this.stockNameInput = el)} />
         <button type="submit">Find!</button>
       </form>,
