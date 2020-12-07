@@ -1,6 +1,6 @@
 {
   "name": "iwswordpress-ionic",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "IWS WP and UC",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
