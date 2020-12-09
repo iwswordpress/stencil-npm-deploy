@@ -15,11 +15,11 @@
     </style>
   </head>
   <body>
-    <uc-stock-price stock-symbol="AAPL"></uc-stock-price>
-    <uc-stock-finder></uc-stock-finder>
+    <iws-stock-price stock-symbol="AAPL"></iws-stock-price>
+    <iws-stock-finder></iws-stock-finder>
 
     <script>
-      const stockFinderEl = document.querySelector('uc-stock-finder');
+      const stockFinderEl = document.querySelector('iws-stock-finder');
       stockFinderEl.addEventListener('ucSymbolSelected', event => {
         console.log(event);
       });
